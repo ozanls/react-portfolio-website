@@ -23,6 +23,5 @@ try {
   console.error(err);
 }
 
-let db = client.db("portfolio");
-
+let db = client.db("Portfolio");
 export default db;
