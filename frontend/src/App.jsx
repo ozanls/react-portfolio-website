@@ -1,7 +1,9 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import './App.css'
+import Projects from './components/Projects'
+import Skills from './components/Skills'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -9,6 +11,9 @@ function App() {
     <Navbar />
     <Hero />
     <About />
+    <Projects />    
+    <Skills />
+    <Footer />
     </>
   )
 }

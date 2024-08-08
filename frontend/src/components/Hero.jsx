@@ -10,9 +10,9 @@ export default function Hero() {
                 <p className="hero__right__title">Junior Web Developer</p>
                 <p className="hero__right__name">Ozan Sereflioglu</p>
                 <p className="hero__right__subtitle">Driven by a passion for creating unique digital experiences.</p>
-                <div className="hero__buttons">
+                <div className="hero__right__buttons">
                     <button className="button-1">View Projects</button>
-                    <button className="button-1">Contact Me</button>
+                    <button className="button-2">Contact Me</button>
                 </div>
             </div>
         </div>
