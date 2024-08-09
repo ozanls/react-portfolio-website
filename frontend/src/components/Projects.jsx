@@ -11,7 +11,7 @@ import 'swiper/css';
 import 'swiper/css/bundle';
 
 export default function Projects () {
-    const [projects, setProjects] = useState([]);
+    const [projects, setProjects] = useState(null);
     const url = import.meta.env.VITE_API_URL || `http://localhost:5050`;
 
 // Fetch projects from the database
@@ -31,40 +31,40 @@ export default function Projects () {
         return;
       }, []);
 
+
 // Output components
-    return(
-        <section id="projects">
-            <div className="section-title">
-                <h2>Projects</h2>
-                <p>A collection of my best work.</p>
-                <hr></hr>
-            </div>
-            <div className="projects">
-                <Swiper
-                modules={[Navigation, A11y, Keyboard]}
-                className="projects__swiper"
-                slidesPerView={3}
-                loop={true}
-                spaceBetween={'30px'}
-                keyboard={{
-                    enabled: true,
-                  }}
-                navigation={
-                    {
-                        nextEl: '.projects__navigation__right',
-                        prevEl: '.projects__navigation__left'
-                    }
-                }
-                >
-                    {projects.map((project, index) => (
-                        <SwiperSlide key={index}><Project project={project} /></SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-            <div className="projects__navigation">
-                <button className="projects__navigation__left button-6"><FontAwesomeIcon icon={faCaretLeft} /></button>
-                <button className="projects__navigation__right button-6"><FontAwesomeIcon icon={faCaretRight} /></button>
-            </div>
-        </section>
-    )
-}
+return (
+    <section id="projects">
+      <div className="section-title">
+        <h2>Projects</h2>
+        <p>A collection of my best work.</p>
+        <hr />
+      </div>
+  
+      {!projects && <div class="loader"></div> }
+      {projects && (
+        <div className="projects">
+          <Swiper
+            modules={[Navigation, A11y, Keyboard]}
+            className="projects__swiper"
+            slidesPerView={3}
+            loop={true}
+            spaceBetween={30}
+            keyboard={{
+              enabled: true,
+            }}
+            navigation={{
+              nextEl: '.projects__navigation__right',
+              prevEl: '.projects__navigation__left',
+            }}
+          >
+            {projects.map((project, index) => (
+              <SwiperSlide key={index}>
+                <Project project={project} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      )}
+    </section>
+  )};

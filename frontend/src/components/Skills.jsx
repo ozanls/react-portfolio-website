@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Skill from './Skill';
 
 export default function Skills () {
-    const [skills, setSkills] = useState([]);
+    const [skills, setSkills] = useState(null);
     const url = import.meta.env.VITE_API_URL || `http://localhost:5050`;
 
 // Fetch skills from the database
@@ -29,11 +29,14 @@ useEffect(() => {
                 <p>Learn more about my technical proficiency.</p>
                 <hr></hr>
             </div>
+            {!skills && <div class="loader"></div> }
+            {skills && (
                 <div className="skills">
                     {skills.map((skill, index) => (
                         <Skill key={index} skill={skill} />
                     ))}
                 </div>
+            )}
         </section>
     )
 }
