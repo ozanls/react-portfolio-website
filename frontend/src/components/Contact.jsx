@@ -8,6 +8,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 export default function Contact() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const handleSubmit = (event) => {
+        event.preventDefault();
         setIsSubmitted(true);
     };
     
@@ -25,6 +26,7 @@ export default function Contact() {
                     </div>
                 ) : (
                     <form className="contact__left" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                        <input type="hidden" name="form-name" value="contact" />
                         <label>
                             Name <br />
                             <input type="text" name="name" placeholder="John Doe" required/>
