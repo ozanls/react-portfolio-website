@@ -1,6 +1,5 @@
-// This is a script to copy the assets from src to dist folder
 // When building, some assets are not copied to the dist folder
-// This script copies all the assets from src folder to  dist folder
+// This script copies all the assets from the src folder to the dist folder
 
 import fs from 'fs';
 import path from 'path';
