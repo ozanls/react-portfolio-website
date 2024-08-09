@@ -43,37 +43,40 @@ export default function Projects() {
 
       {!projects && <div class="loader"></div>}
       {projects && (
-        <div className="projects">
-          <Swiper
-            modules={[Navigation, A11y, Keyboard]}
-            className="projects__swiper"
-            slidesPerView={3}
-            loop={true}
-            spaceBetween={30}
-            keyboard={{
-              enabled: true,
-            }}
-            navigation={{
-              nextEl: ".projects__navigation__right",
-              prevEl: ".projects__navigation__left",
-            }}
-          >
-            {projects.map((project, index) => (
-              <SwiperSlide key={index}>
-                <Project project={project} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        <>
+          <div className="projects">
+            <Swiper
+              modules={[Navigation, A11y, Keyboard]}
+              className="projects__swiper"
+              slidesPerView={3}
+              loop={true}
+              spaceBetween={30}
+              keyboard={{
+                enabled: true,
+              }}
+              navigation={{
+                nextEl: ".projects__navigation__right",
+                prevEl: ".projects__navigation__left",
+              }}
+            >
+              {projects.map((project, index) => (
+                <SwiperSlide key={index}>
+                  <Project project={project} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          <div className="projects__navigation">
+            <button className="projects__navigation__left button-6">
+              <FontAwesomeIcon icon={faCaretLeft} />
+            </button>
+            <button className="projects__navigation__right button-6">
+              <FontAwesomeIcon icon={faCaretRight} />
+            </button>
+          </div>
+        </>
       )}
-      <div className="projects__navigation">
-        <button className="projects__navigation__left button-6">
-          <FontAwesomeIcon icon={faCaretLeft} />
-        </button>
-        <button className="projects__navigation__right button-6">
-          <FontAwesomeIcon icon={faCaretRight} />
-        </button>
-      </div>
     </section>
   );
 }
