@@ -2,7 +2,7 @@ export default function Navbar () {
     return (
         <>
         <nav>
-            <p className="nav__logo">sereflioglu.com</p>
+            <a href="#"><p className="nav__logo">sereflioglu.com</p></a>
             <ul className="nav__links">
                 <a href="#about"><li>About Me</li></a>
                 <a href="#projects"><li>Projects</li></a>
