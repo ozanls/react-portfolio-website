@@ -1,3 +1,5 @@
+// Contact Me Section
+
 import { useState } from 'react';
 import graphic from '../assets/undraw_chatting.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

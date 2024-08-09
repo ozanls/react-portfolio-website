@@ -1,3 +1,4 @@
+// Navbar component
 
 import scrollToSection from './scrollToSection';
 

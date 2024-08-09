@@ -1,3 +1,6 @@
+// Skill component
+// Used to display a single skill
+
 import { ReactSVG } from 'react-svg';
 
 export default function Skill(props) {

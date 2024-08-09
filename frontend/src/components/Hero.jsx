@@ -1,3 +1,5 @@
+// Hero Section
+
 import graphic from '../assets/undraw_developer.svg';
 import scrollToSection from './scrollToSection';
 

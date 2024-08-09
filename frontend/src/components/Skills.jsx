@@ -1,3 +1,6 @@
+// Skills component
+// Used to display all skills
+
 import { useState, useEffect } from 'react';
 import Skill from './Skill';
 
@@ -22,6 +25,7 @@ useEffect(() => {
     return;
   }, []);
 
+// Output components
     return(
         <section id="skills">
             <div className="section-title">

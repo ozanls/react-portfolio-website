@@ -1,3 +1,6 @@
+// Project component
+// Used to display a single project
+
 export default function Project(props) {
 
     return (

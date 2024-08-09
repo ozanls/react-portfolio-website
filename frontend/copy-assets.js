@@ -1,3 +1,7 @@
+// This is a script to copy the assets from src to dist folder
+// When building, some assets are not copied to the dist folder
+// This script copies all the assets from src folder to  dist folder
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -9,6 +13,7 @@ const __dirname = path.dirname(__filename);
 const srcDir = path.join(__dirname, 'src', 'assets');
 const destDir = path.join(__dirname, 'dist', 'assets');
 
+// Copy files from src to dist directory
 function copyFiles(src, dest) {
     if (!fs.existsSync(dest)) {
         fs.mkdirSync(dest, { recursive: true });

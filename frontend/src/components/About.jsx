@@ -1,3 +1,5 @@
+// About Me Section 
+
 import headshot from '../assets/headshot.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'

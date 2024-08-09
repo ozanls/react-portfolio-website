@@ -1,3 +1,6 @@
+// Projects section
+// Used to display all projects
+
 import { useEffect, useState } from 'react';
 import Project from './Project';
 import { Navigation, A11y, Keyboard} from 'swiper/modules';
