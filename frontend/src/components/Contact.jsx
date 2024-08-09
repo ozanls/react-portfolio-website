@@ -25,9 +25,8 @@ export default function Contact() {
                         <p>Thank you! Your message has been sent.</p>
                     </div>
                 ) : (
-                    <form className="contact__left" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-                        <input type="hidden" name="form-name" value="contact" />
-                        <label>
+                    <form className="contact__left" name="contact" method="POST" netlify onSubmit={handleSubmit}>
+=                        <label>
                             Name <br />
                             <input type="text" name="name" placeholder="John Doe" required/>
                         </label>
