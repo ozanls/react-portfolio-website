@@ -8,8 +8,6 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 export default function Contact() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const handleSubmit = (event) => {
-        event.preventDefault();
-        // Perform form submission logic here (e.g., send data to server)
         setIsSubmitted(true);
     };
     
