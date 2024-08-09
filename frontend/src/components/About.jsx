@@ -19,7 +19,7 @@ export default function About () {
                     <div className="about__right">
                         <p className="about__right__text">
                         Hello and welcome! I'm Ozan, and i've been working as a Full Stack Developer since the start of 2024.
-                        Coming from a background in Marketing, my lifelong passion for technology drove me to pursue web development. I pride myself on my willingness to learn, and am always looking for new ways to challenge myself. I'm currently looking for new opportunities, so please feel free to reach out if you think I would be a good fit for your team!
+                        Coming from a background in Marketing, my lifelong passion for technology drove me to pursue Web Development. I pride myself on my willingness to learn, and am always looking for new ways to challenge myself. I'm currently looking for new opportunities, so please feel free to reach out if you think I would be a good fit for your team!
                         </p>
                         <div className="about__right__buttons">
                             <a href="#contact">
