@@ -1,8 +1,8 @@
-export default function Skill() {
+export default function Skill(props) {
     return (
         <div className="skill">
-            <img className="skill__image" src="https://via.placeholder.com/100"/>
-            <p>React</p>
+            <img className="skill__icon" src={props.skill.icon}/>
+            <p>{props.skill.name}</p>
         </div>
     )
 }

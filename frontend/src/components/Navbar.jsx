@@ -2,12 +2,12 @@ export default function Navbar () {
     return (
         <>
         <nav>
-            <p className="nav__logo">Ozan Sereflioglu</p>
+            <p className="nav__logo">sereflioglu.com</p>
             <ul className="nav__links">
-                <li>About Me</li>
-                <li>Projects</li>
-                <li>Skills</li>
-                <li>Contacts</li>
+                <a href="#about"><li>About Me</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#skills"><li>Skills</li></a>
+                <a href="#contact"><li>Contact</li></a>
             </ul>
         </nav>
         </>
