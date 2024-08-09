@@ -2,7 +2,7 @@ export default function Project(props) {
 
     return (
         <div className="project">
-            <img className="project__image" src={`/src/assets/projects/${props.project.name}.jpeg`} alt={`${props.project.name} preview image`} />
+            <img className="project__image" src={`/src/assets/${props.project.name}.jpeg`} alt={`${props.project.name} preview image`} />
             <div className="project__info">
                 <h3 className="project__info__title">{props.project.name}</h3>
                 <p className="project__info__description">{props.project.description}</p>
