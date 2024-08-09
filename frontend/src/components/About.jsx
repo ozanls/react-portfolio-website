@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import scrollToSection from './scrollToSection';
+
 
 export default function About () {
     return(
@@ -22,7 +24,7 @@ export default function About () {
                         Coming from a background in Marketing, my lifelong passion for technology drove me to pursue Web Development. I pride myself on my willingness to learn, and am always looking for new ways to challenge myself. I'm currently looking for new opportunities, so please feel free to reach out if you think I would be a good fit for your team!
                         </p>
                         <div className="about__right__buttons">
-                            <a href="#contact">
+                            <a onClick={() => scrollToSection('contact')}>                    
                                 <button className="button-1">Contact Me</button>
                             </a>
                             <a href="https://www.linkedin.com/in/ozanlago/" target="_blank">

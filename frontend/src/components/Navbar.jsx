@@ -1,15 +1,17 @@
-export default function Navbar () {
+
+import scrollToSection from './scrollToSection';
+
+export default function Navbar() {
+
     return (
-        <>
         <nav>
-            <a href="#"><p className="nav__logo">sereflioglu.com</p></a>
+            <a onClick={() => scrollToSection('hero')}><p className="nav__logo">sereflioglu.com</p></a>
             <ul className="nav__links">
-                <a href="#about"><li>About Me</li></a>
-                <a href="#projects"><li>Projects</li></a>
-                <a href="#skills"><li>Skills</li></a>
-                <a href="#contact"><li>Contact</li></a>
+                <a onClick={() => scrollToSection('about')}><li>About Me</li></a>
+                <a onClick={() => scrollToSection('projects')}><li>Projects</li></a>
+                <a onClick={() => scrollToSection('skills')}><li>Skills</li></a>
+                <a onClick={() => scrollToSection('contact')}><li>Contact</li></a>
             </ul>
         </nav>
-        </>
-    )
+    );
 }
