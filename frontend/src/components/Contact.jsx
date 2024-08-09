@@ -6,11 +6,6 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Contact() {
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        setIsSubmitted(true);
-    };
     
     return (
         <section id="contact">
@@ -20,12 +15,7 @@ export default function Contact() {
                 <hr />
             </div>
             <div className="contact">
-                {isSubmitted ? (
-                    <div className="success-message">
-                        <p>Thank you! Your message has been sent.</p>
-                    </div>
-                ) : (
-                    <form className="contact__left" name="contact" method="POST" netlify onSubmit={handleSubmit}>
+                    <form className="contact__left" name="contact" method="POST" data-netlify="true" onSubmit="submit">
                         <label>
                             Name <br />
                             <input type="text" name="name" placeholder="John Doe" required/>
@@ -40,7 +30,6 @@ export default function Contact() {
                         </label>
                         <button className="button-5" type="submit">Send Message</button>
                     </form>
-                )}
                 <div className="contact__right">
                     <img className="contact__right__graphic" src={graphic} alt="Contact Graphic" />
                     <ul className="contact__right__info">
