@@ -15,7 +15,7 @@ export default function Contact() {
                 <hr />
             </div>
             <div className="contact">
-                    <form className="contact__left" name="contact" method="POST" data-netlify="true" onSubmit="submit">
+                    <form className="contact__left" name="contact" method="POST" netlify onSubmit="submit">
                         <label>
                             Name <br />
                             <input type="text" name="name" placeholder="John Doe" required/>
