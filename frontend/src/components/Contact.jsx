@@ -16,6 +16,7 @@ export default function Contact() {
             </div>
             <div className="contact">
                     <form className="contact__left" name="contact" method="POST" netlify onSubmit="submit">
+                        <input type="hidden" name="form-name" value="contact" />
                         <label>
                             Name <br />
                             <input type="text" name="name" placeholder="John Doe" required/>
