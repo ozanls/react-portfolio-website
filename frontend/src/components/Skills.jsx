@@ -2,18 +2,18 @@ import { useState, useEffect } from 'react';
 import Skill from './Skill';
 
 export default function Skills () {
-
     const [skills, setSkills] = useState([]);
+    const url = import.meta.env.VITE_API_URL || `http://localhost:5050`;
 
 // Fetch skills from the database
 useEffect(() => {
     async function fetchSkills() {
-      const response = await fetch(`http://localhost:5050/skills/`);
-      if (!response.ok) {
+    const response = await fetch(`${url}/skills`);
+    if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
         console.error(message);
         return;
-      }
+    }
       const skills = await response.json();
       setSkills(skills);
       console.log(skills);

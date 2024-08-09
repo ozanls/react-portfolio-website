@@ -11,21 +11,21 @@ import 'swiper/css';
 import 'swiper/css/bundle';
 
 export default function Projects () {
-
     const [projects, setProjects] = useState([]);
-    
+    const url = import.meta.env.VITE_API_URL || `http://localhost:5050`;
+
 // Fetch projects from the database
     useEffect(() => {
         async function fetchProjects() {
-          const response = await fetch(`http://localhost:5050/projects/`);
-          if (!response.ok) {
+            const response = await fetch(`${url}/projects`);
+        if (!response.ok) {
             const message = `An error occurred: ${response.statusText}`;
             console.error(message);
             return;
-          }
-          const projects = await response.json();
-          setProjects(projects);
-          console.log(projects);
+        }
+        const projects = await response.json();
+        setProjects(projects);
+        console.log(projects);
         }
         fetchProjects();
         return;

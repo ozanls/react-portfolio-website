@@ -14,13 +14,17 @@ export default function About () {
             </div>
                 <div className="about">
                     <div className="about__left">
-                        <img className="about__left__headshot" src={headshot}></img>
+                        <img className="about__left__headshot" src={headshot} alt="Ozan Sereflioglu headshot"></img>
                     </div>
                     <div className="about__right">
                         <p className="about__right__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Hello and welcome! I'm Ozan, and i've been working as a Full Stack Developer since the start of 2024.
+                        Coming from a background in Marketing, my lifelong passion for technology drove me to pursue web development. I pride myself on my willingness to learn, and am always looking for new ways to challenge myself. I'm currently looking for new opportunities, so please feel free to reach out if you think I would be a good fit for your team!
                         </p>
                         <div className="about__right__buttons">
+                            <a href="#contact">
+                                <button className="button-1">Contact Me</button>
+                            </a>
                             <a href="https://www.linkedin.com/in/ozanlago/" target="_blank">
                                 <button className="button-6"><FontAwesomeIcon icon={faLinkedin} /></button>
                             </a>

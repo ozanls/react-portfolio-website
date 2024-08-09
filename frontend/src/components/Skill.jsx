@@ -1,7 +1,9 @@
+import { ReactSVG } from 'react-svg';
+
 export default function Skill(props) {
     return (
         <div className="skill">
-            <img className="skill__icon" src={props.skill.icon}/>
+            <ReactSVG className="skill__icon" src={`/src/assets/skills/${props.skill.name}.svg`} />
             <p>{props.skill.name}</p>
         </div>
     )
