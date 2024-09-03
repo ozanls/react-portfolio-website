@@ -16,12 +16,20 @@ export default function Project(props) {
           </p>
           <p className="project__info__tech">{props.project.tech.join(", ")}</p>
           <div className="project__buttons">
-            <a href={props.project.links[0]}>
+
+            {props.project.links.project && (
+            <a href={props.project.links.project}>
               <button className="button-3">View Project</button>
             </a>
-            <a href={props.project.links[1]}>
+            )}
+
+            {props.project.links.repo && (
+            <a href={props.project.links.repo}>
               <button className="button-4">View Repo</button>
             </a>
+            )}
+
+            
           </div>
         </div>
       </div>
