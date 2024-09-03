@@ -23,6 +23,12 @@ export default function Project(props) {
             </a>
             )}
 
+            {!props.project.links.project && (
+            <a>
+              <button className="button-3">Coming Soon...</button>
+            </a>
+            )}
+
             {props.project.links.repo && (
             <a href={props.project.links.repo}>
               <button className="button-4">View Repo</button>
