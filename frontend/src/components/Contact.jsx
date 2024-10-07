@@ -62,12 +62,6 @@ export default function Contact() {
               </div>
               <p>ozan@sereflioglu.com</p>
             </div>
-            <div className="contact__right__info__item">
-              <div className="contact__icon">
-                <FontAwesomeIcon icon={faPhone} />
-              </div>
-              <p>647-425-5678</p>
-            </div>
           </ul>
         </div>
       </div>
